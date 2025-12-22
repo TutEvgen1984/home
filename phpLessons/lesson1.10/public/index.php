@@ -75,6 +75,19 @@
     echo floor(9.999), "<br>"; // 9
     echo floor(-3.14), "<br>"; // -4
 
+    echo ceil(4.3), "<br>";
+    echo ceil(9.999), "<br>";
+    echo ceil(-3.14), "<br>";
+
+    echo "<br>";
+
+    $array = [1100011, 110001, 110, 11000, 11, 1100];
+
+    foreach ($array as $num) {
+        $num = bindec($num);
+        print("$num <br>");
+    };
+
     ?>
 
 </body>
