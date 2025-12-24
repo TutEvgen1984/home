@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?= "php - урок 2.1" ?>
+        <?= "php - урок 2.2" ?>
     </title>
     <style>
         body {
@@ -59,8 +59,6 @@
 
     echo "first_var=$first_var, second_var=$second_var";
     // first_var=3, second_var=3
-
-
 
     ?>
 
