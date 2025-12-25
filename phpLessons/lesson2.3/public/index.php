@@ -74,27 +74,28 @@
     echo "\$distance2 = $distance2 <br>";
     // $distance2 = 25
 
-    echo pow(-1, 17);
+    echo pow(-1, 17); // -1
 
     echo "<br>";
 
-    echo pow(0, 0);
+    echo pow(0, 0); // 1
 
     echo "<br>";
 
-    echo pow(0, 10);
+    echo pow(0, 10); // 0
 
     echo "<br>";
 
-    echo pow(8, -1);
+    echo pow(8, -1); // 0.125
 
     echo "<br>";
 
-    echo pow(-1, 3.5);
+    echo pow(-1, 3.5); // NAN
 
     echo "<br>";
 
-    echo pow(16, 0.5);
+    echo pow(16, 0.5); // 4
+    // метод аналогичен sqrt(16)
 
     ?>
 
