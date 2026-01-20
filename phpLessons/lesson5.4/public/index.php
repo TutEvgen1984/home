@@ -112,6 +112,48 @@
         public $y;
     }
 
+    $fst = new Point;
+    $fst->x = 12;
+    $fst->y = 5;
+
+    $snd = new Point;
+    $snd->x = 1;
+    $snd->y = 1;
+
+    $thd = new Point;
+    $thd->x = 4;
+    $thd->y = 10;
+
+    $arr2 = [$fst, $snd, $thd];
+
+    echo '<pre>';
+    print_r($arr2);
+    echo '</pre>';
+
+    // Array
+    // (
+    //     [0] => Point Object
+    //         (
+    //             [x] => 12
+    //             [y] => 5
+    //         )
+
+    //     [1] => Point Object
+    //         (
+    //             [x] => 1
+    //             [y] => 1
+    //         )
+
+    //     [2] => Point Object
+    //         (
+    //             [x] => 4
+    //             [y] => 10
+    //         )
+
+    // )
+
+    usort($arr2, function ($a, $b) {});
+
 
     ?>
 
