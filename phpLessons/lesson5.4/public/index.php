@@ -106,10 +106,16 @@
     //     [4] => php
     // )
 
+    //  сортировка объектов
     class Point
     {
         public $x;
         public $y;
+        // public означает что переменная доступна как снаружи так и изнутри
+        // то есть переменные $x и $y мы можем установить вне класса
+        // если public убрать, то появляется ошибка Parse error: syntax error, unexpected variable "$x", expecting "function"
+        // если написать private, то появляется ошибка Cannot modify property from global scope
+        // есть еще protective (h используется при наследовании классов)
     }
 
     $fst = new Point;
@@ -124,6 +130,7 @@
     $thd->x = 4;
     $thd->y = 10;
 
+    // поместили 3 созданных объекта в массив
     $arr2 = [$fst, $snd, $thd];
 
     echo '<pre>';
@@ -152,8 +159,41 @@
 
     // )
 
-    usort($arr2, function ($a, $b) {});
+    // сортируем объекты с помощью usort
+    // usort — Сортирует массив по значениям через пользовательскую функцию сравнения элементов
+    // https://www.php.net/manual/ru/function.usort.php
+    usort($arr2, function ($a, $b) {
+        $dist_a = sqrt($a->x ** 2 + $a->y ** 2);
+        $dist_b = sqrt($b->x ** 2 + $b->y ** 2);
+        return $dist_a <=> $dist_b;
+        // <=> это Космический корабль (spaceship)
+        // возвращать будет +1, 0 или +1
+    });
+    echo '<pre>';
+    print_r($arr2);
+    echo '</pre>';
 
+    // Array
+    // (
+    //     [0] => Point Object
+    //         (
+    //             [x] => 1
+    //             [y] => 1
+    //         )
+
+    //     [1] => Point Object
+    //         (
+    //             [x] => 4
+    //             [y] => 10
+    //         )
+
+    //     [2] => Point Object
+    //         (
+    //             [x] => 12
+    //             [y] => 5
+    //         )
+
+    // )
 
     ?>
 
