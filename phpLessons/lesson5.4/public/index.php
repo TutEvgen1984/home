@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?= "php - урок 5.43" ?>
+        <?= "php - урок 5.4" ?>
     </title>
     <style>
         body {
