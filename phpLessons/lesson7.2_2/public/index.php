@@ -31,12 +31,12 @@
             echo htmlspecialchars($_POST['first']);
             exit();
         }
-    }
+    };
     if (!empty($errors)) {
         foreach ($errors as $err) {
             echo "<span style='color:red>$err</span><br>";
         }
-    }
+    };
     ?>
 
     <form method="post">
@@ -46,6 +46,7 @@
         <input type="submit" value="Отправить">
     </form>
 
+    <!-- Ошибки, не работает код как надо -->
 
 </body>
 
