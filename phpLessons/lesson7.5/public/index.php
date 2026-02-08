@@ -6,6 +6,13 @@
     <meta name="viewport" content='width=device-width, initial-scale=1.0'>
     <link rel="stylesheet" href="style.css">
     <title>7.5 Форма обратной связи, отправка письма на почту</title>
+    <style>
+        body {
+            color: white;
+            background-color: black;
+            font-size: 36px;
+        }
+    </style>
 
 </head>
 
