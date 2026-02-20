@@ -1,0 +1,4 @@
+85-92 быстрая сортировка - Адитья Бхаргава (Грокаем Алгоритмы)
+
+https://en.wikipedia.org/wiki/Quicksort
+https://www.php.net/manual/ru/function.sort
