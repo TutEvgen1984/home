@@ -1,9 +1,12 @@
 <?php
-  require_once 'config/connect.php';
+// подключаемся к базе данных
+require_once 'config/connect.php';
+// $connect записана в connect.php, эта переменная далее будет использоваться
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +14,7 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Товары</title>
 </head>
+
 <body>
   <table>
     <tr>
@@ -24,21 +28,21 @@
     </tr>
 
     <?php
-      $products = mysqli_query($connect, "SELECT * FROM `items`");
-      $products = mysqli_fetch_all($products);
-      foreach($products as $product) {
-        ?>
-          <tr>
-            <td><?= $product[0] ?></td>
-            <td><?= $product[1] ?></td>
-            <td><?= $product[2] ?></td>
-            <td><?= $product[3] ?></td> 
-            <td><a href="product.php?id=<?= $product[0] ?>">Просмотр</a></td>
-            <td><a href="update.php?id=<?= $product[0] ?>">Обновить</a></td>
-            <td><a href="vendor/delete.php?id=<?= $product[0] ?>">Удалить</a></td> 
-          </tr>
-        <?php
-      }
+    $products = mysqli_query($connect, "SELECT * FROM `items`");
+    $products = mysqli_fetch_all($products);
+    foreach ($products as $product) {
+    ?>
+      <tr>
+        <td><?= $product[0] ?></td>
+        <td><?= $product[1] ?></td>
+        <td><?= $product[2] ?></td>
+        <td><?= $product[3] ?></td>
+        <td><a href="product.php?id=<?= $product[0] ?>">Просмотр</a></td>
+        <td><a href="update.php?id=<?= $product[0] ?>">Обновить</a></td>
+        <td><a href="vendor/delete.php?id=<?= $product[0] ?>">Удалить</a></td>
+      </tr>
+    <?php
+    }
     ?>
   </table>
 
@@ -54,4 +58,5 @@
   </form>
 
 </body>
+
 </html>
