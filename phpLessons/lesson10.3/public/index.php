@@ -28,8 +28,16 @@ require_once 'config/connect.php';
     </tr>
 
     <?php
+    // запрос на получение усей таблицы имеющей название `items`
     $products = mysqli_query($connect, "SELECT * FROM `items`");
+
+    var_dump($products);
+    // object(mysqli_result)#2 (5) { ["current_field"]=> int(0) ["field_count"]=> int(4) ["lengths"]=> NULL ["num_rows"]=> int(3) ["type"]=> int(0) }
+
     $products = mysqli_fetch_all($products);
+    print_r($products);
+
+
     foreach ($products as $product) {
     ?>
       <tr>
