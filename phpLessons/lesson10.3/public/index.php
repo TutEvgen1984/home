@@ -31,12 +31,53 @@ require_once 'config/connect.php';
     // запрос на получение усей таблицы имеющей название `items`
     $products = mysqli_query($connect, "SELECT * FROM `items`");
 
+    echo "var_dump(\$products)<br>";
     var_dump($products);
     // object(mysqli_result)#2 (5) { ["current_field"]=> int(0) ["field_count"]=> int(4) ["lengths"]=> NULL ["num_rows"]=> int(3) ["type"]=> int(0) }
 
-    $products = mysqli_fetch_all($products);
-    print_r($products);
+    echo "<br><br>";
 
+    // выведем через print_r() (это не очень наглядно)
+    $products = mysqli_fetch_all($products);
+    echo "print_r(\$products)<br>";
+    print_r($products);
+    // Array ( [0] => Array ( [0] => 10 [1] => Товар 1 [2] => Описание товара 1 [3] => 500 ) [1] => Array ( [0] => 12 [1] => Товар 2 [2] => Описание товара 2 [3] => 700 ) [2] => Array ( [0] => 13 [1] => Товар 3 [2] => Описание товара 3 [3] => 900 ) )
+
+    echo "<br><br>";
+
+    // выведем через <pre> перед print_r() (более наглядный вид)
+
+    echo "<pre>";
+    print_r($products);
+    echo "</pre>";
+
+    //     Array
+    // (
+    //     [0] => Array
+    //         (
+    //             [0] => 10
+    //             [1] => Товар 1
+    //             [2] => Описание товара 1
+    //             [3] => 500
+    //         )
+
+    //     [1] => Array
+    //         (
+    //             [0] => 12
+    //             [1] => Товар 2
+    //             [2] => Описание товара 2
+    //             [3] => 700
+    //         )
+
+    //     [2] => Array
+    //         (
+    //             [0] => 13
+    //             [1] => Товар 3
+    //             [2] => Описание товара 3
+    //             [3] => 900
+    //         )
+
+    // )
 
     foreach ($products as $product) {
     ?>
