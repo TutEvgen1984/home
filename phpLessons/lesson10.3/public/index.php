@@ -28,8 +28,9 @@ require_once 'config/connect.php';
     </tr>
 
     <?php
-    // запрос на получение усей таблицы имеющей название `items`
+    // запрос на получение всей таблицы имеющей название `items`
     $products = mysqli_query($connect, "SELECT * FROM `items`");
+    // у функции mysqli в конце стоит i, которая означает improve - улучшенная функция
 
     echo "var_dump(\$products)<br>";
     var_dump($products);
@@ -38,6 +39,7 @@ require_once 'config/connect.php';
     echo "<br><br>";
 
     // выведем через print_r() (это не очень наглядно)
+    // https://www.php.net/manual/ru/mysqli-result.fetch-all.php
     $products = mysqli_fetch_all($products);
     echo "print_r(\$products)<br>";
     print_r($products);

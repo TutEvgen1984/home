@@ -2,9 +2,9 @@
 // подключим соединение с базой данных
 require_once '../config/connect.php';
 
-// Обязательно закомментровать, иначе будет Warning: Cannot modify header information - headers already sent by
 // print_r($_POST);
 // Array ( [title] => 111 [description] => 222 [price] => 333 )
+// Обязательно закомментровать print_r, иначе будет Warning: Cannot modify header information - headers already sent by
 
 $title = $_POST['title'];
 // это означает - взять из глобального массива $_POST, в котором содержатся именованные значения, взять значение которое записано в именном ключе 'title'
@@ -13,7 +13,7 @@ $title = $_POST['title'];
 $description = $_POST['description'];
 $price = $_POST['price'];
 
-// запрос на добавление  наших трех переменных в базу данных
+// запрос на добавление наших трех переменных в базу данных
 mysqli_query($connect, "INSERT INTO `items` (`id`, `title`, `description`, `price`) VALUES (NULL, '$title', '$description', '$price')");
 // первое значение у нас NULL для того чтобы идентификатор подставился автоматически
 
@@ -29,4 +29,3 @@ header('Location: /');
 // <?php header(..);
 // html...
 // Почему? Потому что сначала отправляются заголовки, чтобы клиент сформировал "представление" о документе, а на основе этого решал что делать. А так ты (а может и не ты) отсылаешь ему заголовки, что-то пытаешься потом вывести и снова отправить заголовки.
-// Чтобы иметь представление: http://phpmove.ru/header.html
