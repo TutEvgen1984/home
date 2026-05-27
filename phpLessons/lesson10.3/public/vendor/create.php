@@ -17,9 +17,9 @@ $price = $_POST['price'];
 mysqli_query($connect, "INSERT INTO `items` (`id`, `title`, `description`, `price`) VALUES (NULL, '$title', '$description', '$price')");
 // первое значение у нас NULL для того чтобы идентификатор подставился автоматически
 
-// переадресация https://www.php.net/manual/ru/function.header.php
+// переадресация (автоматическое перебрасывание) https://www.php.net/manual/ru/function.header.php
 header('Location: /');
-// это для того чтобы после выполнения этого скрипта перейти на главную страницу
+// это для того чтобы после выполнения этого скрипта автоматически перейти на главную страницу
 // 'Location: /' означает перейти в родительскую директорию, это тоже самое что 'Location: ../index.php'
 
 // Запомни раз и на всегда, header() (Заголовки) отправляй ДО любого вывода.

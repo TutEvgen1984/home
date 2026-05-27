@@ -20,17 +20,18 @@ require_once 'config/connect.php';
     <tr>
       <th>id</th>
       <th>Название</th>
-      <th>Цена</th>
       <th>Описание</th>
-      <th>&#9672;</th>
-      <th>&#9998;</th>
-      <th>&#10006;</th>
+      <th>Цена</th>
+      <th>&#9672;</th><!-- символ ромб -->
+      <th>&#9998;</th><!-- символ карандаш -->
+      <th>&#10006;</th><!-- символ крест -->
     </tr>
 
     <?php
-    // запрос на получение всей таблицы имеющей название `items`
+    // запрос на получение всей таблицы имеющей название `items` (там может быть несколько таблиц, нам нужно из них выбрать одну конкретную)
     $products = mysqli_query($connect, "SELECT * FROM `items`");
     // у функции mysqli в конце стоит i, которая означает improve - улучшенная функция
+    // mysql_query без i это
 
     echo "var_dump(\$products)<br>";
     var_dump($products);
@@ -38,16 +39,18 @@ require_once 'config/connect.php';
 
     echo "<br><br>";
 
-    // выведем через print_r() (это не очень наглядно)
-    // https://www.php.net/manual/ru/mysqli-result.fetch-all.php
+    // в уже существующую переменную $products запишем новую функцию, которая выбирает все строки из результирующего набора и помещает их в ассоциативный массив, обычный массив или в оба
     $products = mysqli_fetch_all($products);
+    // https://www.php.net/manual/ru/mysqli-result.fetch-all.php
+
+    // выведем через print_r() (это не очень наглядно)
     echo "print_r(\$products)<br>";
     print_r($products);
     // Array ( [0] => Array ( [0] => 10 [1] => Товар 1 [2] => Описание товара 1 [3] => 500 ) [1] => Array ( [0] => 12 [1] => Товар 2 [2] => Описание товара 2 [3] => 700 ) [2] => Array ( [0] => 13 [1] => Товар 3 [2] => Описание товара 3 [3] => 900 ) )
 
     echo "<br><br>";
 
-    // выведем через <pre> перед print_r() (более наглядный вид)
+    // выведем через <pre> перед (более наглядный вид)
 
     echo "<pre>";
     print_r($products);
@@ -81,6 +84,8 @@ require_once 'config/connect.php';
 
     // )
 
+    // заполняем таблицу полученными и подготовленными данными
+    // в главном массиве $products есть 3 элемента, которые в свою очередь являются массивами имеющими по 4 элемента
     foreach ($products as $product) {
     ?>
       <tr>
