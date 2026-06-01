@@ -1,6 +1,9 @@
 <?php
 add_action('wp_enqueue_scripts', 'add_scripts_and_styles');
 
+// добавить поддержку выбора логотипа сайта
+add_theme_support('custom-logo');
+
 function add_scripts_and_styles()
 {
     // подключение своего jquery взамен встроенного в wp

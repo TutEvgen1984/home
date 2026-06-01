@@ -6,7 +6,10 @@ Author URI: https://morphismail.github.io/landingpageBW/
 Description: Черно белая тема на WordPress
 Version: 1.0
 */
-@font-face {
+
+/* шрифты подключенные с помощью @font-face вырезаем из текущего файла и вставляем в fontello.css так как путь изменился из за того что файл style переместился в корень */
+
+/* @font-face {
     font-family: "HelveticaNeueLTProLt";
     src: url(../fonts/HelveticaNeueLTProLt.otf) format("opentype");
 }
@@ -39,7 +42,7 @@ Version: 1.0
 @font-face {
     font-family: "Roboto-Regular";
     src: url(../fonts/Roboto-Regular.ttf) format("truetype");
-}
+} */
 
 /*
 font-family: "HelveticaNeueLTProLt", sans-serif;
@@ -97,7 +100,9 @@ body {
     color: #010101;
 }
 
-.logo {
+.custom-logo {
+    max-height: 55px;
+    max-width: 55px;
     margin: 0 16px;
 }
 
