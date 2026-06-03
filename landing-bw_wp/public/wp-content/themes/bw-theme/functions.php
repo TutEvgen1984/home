@@ -25,3 +25,4 @@ function add_scripts_and_styles()
     // <link rel="stylesheet" id="main-css" href="https://landingbwwp/wp-content/themes/bw-theme/style.css?ver=7.0" media="all">
 
 }
+?>

@@ -48,9 +48,9 @@
                 </ul>
             </nav>
             <div class="header__content">
-                <h1 class="header__title"><?php CFS()->get('header_title') ?></h1>
-                <p class="header__text"><?php CFS()->get('header_slogan') ?></p>
-                <a href="#about" class="header__button"><?php CFS()->get('header_button') ?></a>
+                <h1 class="header__title"><?= CFS()->get('header_title') ?></h1>
+                <p class="header__text"><?= CFS()->get('header_slogan') ?></p>
+                <a href="#about" class="header__button"><?= CFS()->get('header_button') ?></a>
             </div>
         </div>
     </header>

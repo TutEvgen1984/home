@@ -53,6 +53,10 @@ font-family: "Montserrat-Light", sans-serif;
 font-family: "Montserrat-Regular", sans-serif;
 font-family: "Roboto-Regular", sans-serif;
 */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -151,12 +155,10 @@ body {
 
 /*О нас*/
 .about {
-    height: 1129px;
+    min-height: 1129px;
     padding-top: 128px;
     padding-bottom: 271px;
-    background: url(../img/buildings_white.png) center 100% repeat-x,
-        url(../img/buildings_dark.png) center 100% repeat-x,
-        #1d1d1d;
+
     /* background-size: contain, contain; */
 }
 
