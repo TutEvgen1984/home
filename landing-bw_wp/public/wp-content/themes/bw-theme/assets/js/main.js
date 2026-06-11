@@ -1,5 +1,5 @@
-$(document).ready(function () {
-    /* Плавная прокрутка меню */
+/*$(document).ready(function () {
+    /~ Плавная прокрутка меню ~/
     $('.header a[href^="#"]').click(function () {
         let target = $(this).attr('href');
         $('html, body').animate({
@@ -11,9 +11,23 @@ $(document).ready(function () {
         $('.menu__burger').toggleClass('close');
         return false;
     });
-    /* Мобильное меню */
+    /~ Мобильное меню ~/
     $('.menu__burger').click(function () {
         $('.menu__mobile .menu').toggle(500);
         $(this).toggleClass('close');
     });
+});*/
+
+console.log('main.js on');
+
+// <!-- Initialize Swiper -->
+//   <script type="module">
+// import Swiper from 'swiper/swiper-bundle.mjs';
+// import 'swiper/swiper-bundle.css';
+var swiper = new Swiper('.swiper', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 });
+//   </script>

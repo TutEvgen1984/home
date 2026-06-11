@@ -28,37 +28,50 @@
             <p class="block__text"><?php CFS()->get('team_description') ?></p>
         </div>
         <div class="team__inner">
-            <?php
-            $loop = CFS()->get('team_card2');
-            foreach ($loop as $row) {
-            ?>
-                <div class="team__item">
-                    <img class="team__item-img" src="<?= $row['team_img'] ?>" alt="">
-                    <h3 class="team__item-title"><?= $row['team_name'] ?></h3>
-                    <p class="team__item-text"><?= $row['team_post'] ?></p>
-                    <div class="team__icon-box">
 
-                        <?php if (!empty($row['team_twetter']['url'])) { ?>
-                            <a href="<?= $row['team_twetter']['url'] ?>" target="<?= $row['team_twetter']['target'] ?> "><i class="icon-twitter"></i></a>
-                        <?php } ?>
+            <!-- Swiper -->
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <?php
+                    $loop = CFS()->get('team_card2');
+                    foreach ($loop as $row) {
+                    ?>
+                        <div class="swiper-slide">
+                            <div class="team__item">
+                                <img class="team__item-img" src="<?= $row['team_img'] ?>" alt="">
+                                <h3 class="team__item-title"><?= $row['team_name'] ?></h3>
+                                <p class="team__item-text"><?= $row['team_post'] ?></p>
+                                <div class="team__icon-box">
 
-                        <?php if (!empty($row['team_instagram']['url'])) { ?>
-                            <a href="<?= $row['team_instagram']['url'] ?>" target="<?= $row['team_instagram']['target'] ?> "><i class="icon-instagram"></i></a>
-                        <?php } ?>
+                                    <?php if (!empty($row['team_twetter']['url'])) { ?>
+                                        <a href="<?= $row['team_twetter']['url'] ?>" target="<?= $row['team_twetter']['target'] ?> "><i class="icon-twitter"></i></a>
+                                    <?php } ?>
 
-                        <?php if (!empty($row['team_vk']['url'])) { ?>
-                            <a href="<?= $row['team_vk']['url'] ?>" target="<?= $row['team_vk']['target'] ?>"><i class="icon-instagram"></i></a>
-                        <?php } ?>
+                                    <?php if (!empty($row['team_instagram']['url'])) { ?>
+                                        <a href="<?= $row['team_instagram']['url'] ?>" target="<?= $row['team_instagram']['target'] ?> "><i class="icon-instagram"></i></a>
+                                    <?php } ?>
 
-                        <?php if (!empty($row['team_facebook']['url'])) { ?>
-                            <a href="<?= $row['team_facebook']['url'] ?>" target="<?= $row['team_facebook']['target'] ?>"><i class="icon-instagram"></i></a>
-                        <?php } ?>
+                                    <?php if (!empty($row['team_vk']['url'])) { ?>
+                                        <a href="<?= $row['team_vk']['url'] ?>" target="<?= $row['team_vk']['target'] ?>"><i class="icon-instagram"></i></a>
+                                    <?php } ?>
 
-                    </div>
+                                    <?php if (!empty($row['team_facebook']['url'])) { ?>
+                                        <a href="<?= $row['team_facebook']['url'] ?>" target="<?= $row['team_facebook']['target'] ?>"><i class="icon-instagram"></i></a>
+                                    <?php } ?>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php
+                    }
+                    ?>
                 </div>
-            <?php
-            }
-            ?>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
         </div>
     </div>
 </div>
