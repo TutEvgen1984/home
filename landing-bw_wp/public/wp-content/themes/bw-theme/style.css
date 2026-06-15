@@ -290,13 +290,16 @@ body {
 
 .provide__inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 138px;
+    flex-wrap: wrap;
 }
 
 .provide__item {
     text-align: center;
-    max-width: 335px;
+    width: 33%;
+    max-width: 415px;
+    padding: 0 40px;
 }
 
 .provide__item i {
@@ -628,3 +631,20 @@ input[type='number'] {
         padding-top: 100px;
     }
 }
+
+/* #region swiper */
+.swiper {
+    width: 100%;
+    height: 390px;
+}
+
+.swiper-scrollbar {
+    margin-bottom: 40px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: black;
+}
+
+/* #endregion swiper */
