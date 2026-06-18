@@ -139,6 +139,7 @@
                 <input type="submit" class="contact__button" value="Submit">
             </form> -->
 
+            <!-- вставляем на страницу форму вордпресса с полями с помощью вставки php шорт-кода (плагин Contact form) -->
             <?php
 
             echo do_shortcode('[contact-form-7 id="2a53010" title="Contact form 1"]');
