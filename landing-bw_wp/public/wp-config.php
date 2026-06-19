@@ -24,13 +24,25 @@
 define('DB_NAME', 'landing-bw_wp');
 
 /** Database username */
+// Для OPEN SERVER PANEL
 define('DB_USER', 'root');
 
+// Для handyhost.ru
+// define('DB_USER', 'u206651_admin');
+
 /** Database password */
+// Для OPEN SERVER PANEL
 define('DB_PASSWORD', '');
 
+// Для handyhost.ru
+// define('DB_PASSWORD', 'admin88');
+
 /** Database hostname */
+// Для OPEN SERVER PANEL
 define('DB_HOST', 'MySQL-8.4:3306');
+
+// Для handyhost.ru
+// define('DB_HOST', 'localhost');
 
 /** Database charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');

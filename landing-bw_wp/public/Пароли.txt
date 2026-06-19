@@ -1,0 +1,13 @@
+http://u206651.test-handyhost.ru
+https://u206651.test-handyhost.ru
+
+Пользователи базы данных - u206651_bw
+БД phpMyAdmin встроенный:
+лог: u206651_admin
+пар: admin88
+
+БД когда уже зашли с верхними паролями и логином
+user_login: admin
+user_pass: admin8
+кодировка MD5
+696b2c412e13cb952903e99d6fcf469b
