@@ -1,6 +1,10 @@
 http://u206651.test-handyhost.ru
 https://u206651.test-handyhost.ru
 
+http://u206651.test-handyhost.ru/wp-admin
+логин: admin
+пароль: admin8
+
 Пользователи базы данных - u206651_bw
 БД phpMyAdmin встроенный:
 лог: u206651_admin
@@ -11,3 +15,6 @@ user_login: admin
 user_pass: admin8
 кодировка MD5
 696b2c412e13cb952903e99d6fcf469b
+
+Пароль для почты: admin8
+
