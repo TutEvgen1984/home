@@ -1,2 +1,6 @@
+Вход в админку WP:
 Логин: admin
 пароль: admin
+
+https://morphismail.github.io/dveri/
+
