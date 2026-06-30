@@ -8,6 +8,9 @@
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <title>Главная</title>
+
+    <!-- функция, подключающая скрипты и стили от самого вордпресса -->
+    <?php wp_head(); ?>
 </head>
 
 <body>

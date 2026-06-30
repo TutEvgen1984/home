@@ -1,4 +1,4 @@
-<!-- запуск файла header.php -->
+<!-- запуск кода из header.php -->
 <?php get_header(); ?>
 
 <!-- Шапка -->
@@ -189,5 +189,5 @@
 	</div>
 </div>
 
-<!-- запуск файла footer.php -->
+<!-- запуск кода из footer.php -->
 <?php get_footer(); ?>
