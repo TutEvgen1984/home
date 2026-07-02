@@ -1,3 +1,6 @@
+https://dveriwp/
+https://dveriwp/wp-admin
+
 Вход в админку WP:
 Логин: admin
 пароль: admin
