@@ -6,8 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="shortcut icon" href="img/logo.png" type="image/x-icon"> -->
-    <link rel="stylesheet" href="css/style.css">
-    <title>Главная</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>
+        <?php
+        if (is_404()) {
+            echo 'Ошибка 404';
+        }
+        ?>
+    </title>
 
     <!-- функция, подключающая скрипты и стили от самого вордпресса -->
     <?php wp_head(); ?>
@@ -21,7 +27,7 @@
                 <div class="logo">
                     <a href=" <?= home_url(); ?> ">
 
-                        <!--  вывод логотипа через визуальные возможности админки вордпресса -->
+                        <!-- вывод логотипа через визуальные возможности админки вордпресса -->
                         <!-- <img src="img/logo.png" alt="логотип"> -->
                         <?php the_custom_logo(); ?>
                     </a>
