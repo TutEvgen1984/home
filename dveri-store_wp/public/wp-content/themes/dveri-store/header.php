@@ -11,6 +11,8 @@
         <?php
         if (is_404()) {
             echo 'Ошибка 404';
+        } else {
+            the_title();
         }
         ?>
     </title>

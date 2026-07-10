@@ -20,3 +20,12 @@ function add_features()
     ));
 }
 // внешний вид => настроить => свойства сайта => выбрать логотип
+
+// Зарегистрируем верхнее и нижнее меню
+add_action('after_setup_theme', 'add_menu');
+function add_menu()
+{
+    register_nav_menu('top', 'Главное меню сайта');
+    register_nav_menu('bottom', 'Политика конфиденциальности');
+}
+// Wp -> Внешний вид -> Появилось "Меню"
